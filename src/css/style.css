@@ -143,9 +143,10 @@ label {
   cursor: pointer;
   background-color: #26547c;
   border-radius: 8px;
+  z-index: 1;
 }
 
-.meme::after {
+.meme_details::after {
   display: none;
   content: '';
   position: absolute;
@@ -153,7 +154,7 @@ label {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 100;
+  z-index: 1;
   background-color: rgba(239, 71, 111, 0.5);
   background-image: url(../images/cross.svg);
   background-size: 35%;
@@ -163,7 +164,7 @@ label {
   transition: 0.3s ease-out;
 }
 
-.meme:hover::after {
+.meme_details:hover::after {
   display: block;
 }
 
@@ -191,13 +192,18 @@ label {
 }
 
 .meme .footer-text {
-  bottom: 0;
+  bottom: 3rem;
 }
 
 .meme img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+.meme .btn{
+  position: relative;
+  z-index: 1000;
 }
 
 #memeHelper {
